@@ -1,4 +1,10 @@
 $font: 'Roboto', sans-serif
+$primari-color: #604c8d
+$secondary-color: #f2df4d
+$accent: #9d9d9c
+$XS: 576px
+$S: 768px
+$M: 992px
     
 *
     margin: 0
@@ -11,35 +17,81 @@ body
 
 header
     
-
     nav
-        display: flex
-        flex-wrap: wrap
-        align-items: center
-        padding: 0 24px
-        background-color: #5a02ce
+        background-color: $primari-color
 
-        h1
-            font-size: 36px
-            font-weight: 700
+    form
+        width: 50%
+        line-height: 2.5
 
-        input
-            line-height: 2.5
-            width: 50%
-            margin: 0 32px
-            border-radius: 5px
+        .offcanvas-header,.offcanvas-body
+            background-color: $primari-color
+
+main
+    margin-top: 48px
+
+    h1
+        font-weight: 900
+        font-size: 48px
+
+    h5
+        color: $accent
+
+        .line
+            display: inline-block
+            width: 70%
+            border-bottom: 1px solid
+            margin:0 8px 7px
+
+.card-carousel
+    padding: 24px 0
+
+.n-card
+    width: 32%
+    margin-left: 8px
+    border: 1px solid
+    border-radius: 10px
+
+.card-img-overlay
+    top: auto
+    background: rgb(255,255,255)
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.6) 70%)
+
+    .card-img-overlay::before
+        position: absolute
+        content: ' '
+        height: 100%
+        width: 100%
+        background: #000000 
+
+    .card-title
+        display: inline-block
+        border: 1px solid
+        border-radius: 5px
+        background-color: $secondary-color
+        color: #000
+        padding: 0 16px
+        margin-bottom: 16px
+
+.space
+    margin-top: 24px 
+    min-height: 250px
+
+.section
+    padding: 48px 0
+
+@media (max-width:$M)
+    .n-card
+        width: 48%
+
+@media (max-width: $XS)
+    .n-card
+        width: 95%
+
+    
+    
+    
+            
+        
 
 
-        ul
-            display: flex
-            flex-wrap: wrap
-            background-color: #9758e9
-            height: 100%
-            padding: 16px
-
-            li
-                list-style: none
-                margin: 8px 16px
-
-                i   
-                    font-size: 25px
